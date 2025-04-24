@@ -1,5 +1,4 @@
-import '../sectionThird.css'; 
-
+import '../sectionThird.css';
 
 interface Text {
   ru: string;
@@ -21,7 +20,7 @@ const skills: Record<string, Skill> = {
       az: "HTML veb səhifələrinin strukturunu yaratmaq üçün istifadə olunan dildir.",
       en: "HTML is the language used to create the structure of web pages.",
     },
-    iconPath: "/html5-brands.svg",
+    iconPath: process.env.PUBLIC_URL + "/html5-brands.svg",
   },
   css: {
     name: { ru: "CSS", az: "CSS", en: "CSS" },
@@ -30,7 +29,7 @@ const skills: Record<string, Skill> = {
       az: "CSS veb səhifələrinin dizaynı üçün istifadə olunur.",
       en: "CSS is used for styling web pages.",
     },
-    iconPath: "/css-brands.svg",
+    iconPath: process.env.PUBLIC_URL + "/css-brands.svg",
   },
   javascript: {
     name: { ru: "JavaScript", az: "JavaScript", en: "JavaScript" },
@@ -39,7 +38,7 @@ const skills: Record<string, Skill> = {
       az: "JavaScript saytlar üzərində interaktivliyi əlavə etmək üçün istifadə olunan dildir.",
       en: "JavaScript is the language for adding interactivity to websites.",
     },
-    iconPath: "/js-brands.svg",
+    iconPath: process.env.PUBLIC_URL + "/js-brands.svg",
   },
   react: {
     name: { ru: "React", az: "React", en: "React" },
@@ -48,7 +47,7 @@ const skills: Record<string, Skill> = {
       az: "React istifadəçi interfeysləri yaratmaq üçün kitabxanadır.",
       en: "React is a library for building user interfaces.",
     },
-    iconPath: "/react-brands.svg",
+    iconPath: process.env.PUBLIC_URL + "/react-brands.svg",
   },
   typescript: {
     name: { ru: "TypeScript", az: "TypeScript", en: "TypeScript" },
@@ -57,7 +56,7 @@ const skills: Record<string, Skill> = {
       az: "TypeScript JavaScript-in tipli bir genişlənməsidir.",
       en: "TypeScript is an extension of JavaScript with typing.",
     },
-    iconPath: "/icons8-typescript.svg",
+    iconPath: process.env.PUBLIC_URL + "/icons8-typescript.svg",
   },
 };
 
