@@ -1,36 +1,42 @@
 .section-first {
     height: 100vh;
-    background: linear-gradient(120deg, #ff5f6d, #ffc3a0);
     background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0 20px;
+    background-image: url(../public/backgound.png);
+    background-repeat: no-repeat;
+    background-position: center;
+background-size: cover;
+position: relative;
   }
-  
+
+  .section-first::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+
   .section-heading {
-    font-size: 4rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #fff;
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+      position: relative;
+      color: #AEE4FF; 
+      font-size: 4rem;
+      text-align: center;
+      z-index: 1;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6); 
+      font-weight: 600;
   }
+
   
-  @keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-  }
-  
+  .section-heading::after {
+  content: '';
+  border-right: 3px solid #AEE4FF;
+}
+
   @media screen and (max-width: 600px) {
     .section-heading {
         font-size: 2rem;
