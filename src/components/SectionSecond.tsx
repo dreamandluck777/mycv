@@ -22,7 +22,7 @@ const textForPSectionSecond: TextForSection = {
 };
 
 const description = "Это изображение профиля.";
-const imagePath = "/image.jpeg";
+const imagePath = "/photo.jpeg";
 
 function SectionSecond({ lang }: { lang: 'ru' | 'az' | 'en' }) {
   return (
