@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import SectionFirst from './components/SectionFirst';
+import SectionSecond from './components/SectionSecond';
+import SectionThird from './components/SectionThird';
+import SectionFourth from './components/SectionFourth';
+import './index.css';
 
-function App() {
+type SwitchLang = 'ru' | 'az' | 'en';
+
+const App = () => {
+  const [lang, setLang] = useState<SwitchLang>('ru');
+
+  const switchLang = (lang: SwitchLang) => {
+    setLang(lang);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header lang={lang} switchLang={switchLang} />
+      <SectionFirst lang={lang} />
+      <SectionSecond lang={lang} />
+      <SectionThird lang={lang} />
+      <SectionFourth lang={lang} />
     </div>
   );
-}
+};
 
 export default App;

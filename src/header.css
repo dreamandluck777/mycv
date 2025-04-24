@@ -1,0 +1,162 @@
+
+.headerWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(14, 13, 15);
+    padding: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: background 0.3s ease;
+  }
+  
+  .h1Title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .divWrapperForButton {
+    display: flex;
+    justify-content: space-around;
+    border: 5px solid white;
+    width: 150px;
+    height: 60px;
+    border-radius: 25px;
+  }
+  
+  .langButton {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 50px;
+    height: 100%;
+  }
+  
+  .activeLang {
+    color: #4CAF50;
+    transform: scale(1.1);
+    border-radius: 50%;
+    border: 5px solid #4CAF50;
+  }
+  
+  .navList {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+  }
+  
+  .navLink {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    text-decoration: none;
+    position: relative; 
+  }
+
+  .navLinkActive {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: red;
+    text-decoration: none;
+    position: relative; 
+  }
+  
+  .navLink::after {
+    content: ''; 
+    position: absolute;
+    bottom: -3px; 
+    left: 0;
+    width: 100%;
+    height: 3px; 
+    background-color: white;
+    transition: transform 0.3s ease, bottom 0.3s ease; 
+  }
+  
+  .navLink:hover::after {
+    transform: translateY(-20px);
+  }
+  
+  .navLink:active::after {
+    transform: translateY(-20px); 
+  }
+  
+  .navLink:hover {
+    transform: translateY(-10px);
+  }
+  
+  .navLink:active {
+    transform: translateY(-20px); 
+  }
+  @media screen and (max-width: 900px) {
+    .headerWrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 5px;
+    }
+
+  
+    .divWrapperForButton {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 75px;
+      height: 100px;
+      gap: 10px;
+      padding: 10px;
+      border: 3px solid white; 
+      border-radius: 15px;
+    }
+
+    .langButton {
+      width: 60px;
+      height: 40px;
+      border: none;
+    }
+  
+    .navList {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .h1Title {
+      font-size: 2rem;
+  }
+  .navLink, .navLinkActive {
+    font-size: 1rem;
+}
+
+  }
+
+  @media screen and (min-width: 901px) and (max-width: 1200px) {
+    .h1Title {
+        font-size: 2.2rem;
+    }
+
+    .navList {
+        gap: 20px;
+    }
+
+    .navLink, .navLinkActive {
+        font-size: 1.1rem;
+    }
+  }

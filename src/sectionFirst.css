@@ -1,0 +1,51 @@
+.section-first {
+    height: 100vh;
+    background: linear-gradient(120deg, #ff5f6d, #ffc3a0);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .section-heading {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+  }
+  
+  @keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .section-heading {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+  
+    .section-first {
+        padding: 0 10px;
+    }
+  }
+  
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    .section-heading {
+        font-size: 3rem;
+        letter-spacing: 1.5px;
+    }
+  }
+  
